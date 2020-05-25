@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>伪类选择器</title>
+    <style>
+        /*ul的第一个子元素*/
+        ul li:first-child{
+            background: blueviolet;
+        }
+        /*ul的最后一个子元素*/
+        ul li:last-child{
+            background: burlywood;
+        }
+        /*选中p1: 定位到父元素，选择当前的第一个元素
+        选中当前p元素的父级元素，选中父级元素的第一个，并且是当前元素才生效！
+        */
+        p:nth-child(3){
+            background: #4c781a;
+        }
+        /*选择父元素下的p元素的第二个，类型*/
+        p:nth-of-type(1){
+                background: aquamarine;
+        }
+
+        a:hover{
+            background: chocolate;
+        }
+        
+
+    </style>
+</head>
+<body>
+<a href="">lijinglun</a>
+<!--<h1>hh</h1>-->
+<p>p1</p>
+<p>p2</p>
+<p>p3</p>
+<ul>
+    <li>li1</li>
+    <li>li2</li>
+    <li>li3</li>
+</ul>
+
+</body>
+</html>
