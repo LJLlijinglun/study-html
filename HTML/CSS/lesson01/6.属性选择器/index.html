@@ -13,6 +13,39 @@
             height: 50px;
             color: #4c781a;
             margin: 10px;
+            font: bold 20px/50px Arial;
+            /*
+            20px为字体大小
+            50px为行高
+            bold为粗体
+            Arial为字体*/
+        }
+        /*1、存在id属性的元素  a[]{}*/
+       /*a[id]{*/
+       /*    background: chartreuse;*/
+       /*}*/
+
+        /*2、属性名，属性名=属性值（正则）*/
+        /*a[id=first]{*/
+        /*    background: aqua;*/
+        /*}*/
+
+        /*3、class中有links的元素
+        =是绝对等于
+        *=是包含所有links元素的项
+        */
+        /*a[class*="links"]{*/
+        /*    background: burlywood;*/
+        /*}*/
+
+        /*4、选中href中以http开头的元素*/
+        /*a[href^=http]{*/
+        /*    background: aquamarine;*/
+        /*}*/
+
+        /*5、选中href中以pdf结尾的元素*/
+        a[href$=pdf]{
+            background: chartreuse;
         }
     </style>
 </head>

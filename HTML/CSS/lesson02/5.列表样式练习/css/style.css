@@ -1,0 +1,37 @@
+
+#nav{
+    width: 500px;
+}
+
+.class{
+    line-height: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    text-indent: 1em;
+    background: #ff0606;
+}
+/*ul li*/
+/*list-style: none 去掉原点
+list-style: circle 变成空心圆
+list-style: decimal 有序
+list-style: square 实心正方形
+*/
+ul li{
+    height: 30px;
+    /*list-style: none;*/
+    /*list-style: circle;*/
+    /*list-style: decimal;*/
+    list-style: square;
+    text-indent: 1em;
+
+
+}
+ul{
+    background: antiquewhite;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    color: #abec6a;
+}
