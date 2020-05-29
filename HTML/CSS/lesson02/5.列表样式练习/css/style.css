@@ -9,6 +9,8 @@
     font-weight: bold;
     text-indent: 1em;
     background: #ff0606;
+/*图片颜色 图片 图片位置 平铺方式*/
+    background: red url("../images/xiangxiajiantou.jpg") 200px 5px no-repeat;
 }
 /*ul li*/
 /*list-style: none 去掉原点
@@ -23,6 +25,7 @@ ul li{
     /*list-style: decimal;*/
     list-style: square;
     text-indent: 1em;
+    background: antiquewhite url("../images/xiangyoujiantou.jpg") 400px no-repeat;
 
 
 }
