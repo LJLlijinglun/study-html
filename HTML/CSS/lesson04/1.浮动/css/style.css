@@ -1,0 +1,66 @@
+div{
+    margin: 10px;
+    padding: 5px;
+}
+/*display:；方向不可以控制*/
+/*float：浮动起来的话会脱离标准文档流，所以要解决父级边框塌陷问题*/
+
+/*解决父级边框塌陷的问题：
+1.给父级边框设置高度 好处：简单 弊端：假设元素有了固定的高度，就会被限制
+2.在后面增加一个空的div标签，清除左右浮动 好处：简单 弊端：但代码中尽量避免空的div
+3.加overflow属性，使其内容溢出自动滚动 好处：简单 弊端：下拉的一些场景避免使用
+4.父类添加伪类after （推荐使用）*/
+
+#father{
+    border: 1px solid black;
+    /*overflow: hidden;*/
+}
+#father:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.lesson01{
+    border: 2px dashed #abec6a;
+    /*行内块 独占一行*/
+    display: inline-block;
+    float: right;
+
+}
+.lesson02{
+    border: 1px  dashed #4c781a;
+    /*行内块 独占一行*/
+    display: inline-block;
+    /*float:left;*/
+    float: right;
+
+
+}
+.lesson03{
+    border: 1px dashed #0058af;
+    /*行内块 独占一行*/
+    display: inline-block;
+    /*float:left;*/
+    float: right;
+
+
+}
+.lesson04{
+    /*clear: right;清除右侧浮动*/
+    /*clear: left;清除左侧浮动*/
+    /*clear: both;左右两侧不允许有浮动元素*/
+    border: 1px #FA6F03 dashed;
+    font-size: 12px;
+    line-height: 23px;
+    /*行内块 独占一行*/
+    display: inline-block;
+    float: right;
+    /*clear: both;*/
+
+
+}
+/*.clear{*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*    clear: both;*/
+/*}*/

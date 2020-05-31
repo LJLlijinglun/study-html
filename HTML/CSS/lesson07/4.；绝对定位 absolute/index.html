@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>绝对定位学习</title>
+    <style>
+        /*position: relative;相对定位，上下左右*/
+        /*1.position: absolute; 绝对定位，上下左右 没有父级元素定位的前提下，相对于浏览器定位
+        2.假设父级元素存在定位，我们通常会相对于父级元素进行偏移
+        3.在父级元素范围内偏移
+        相对于父级或浏览器位置，进行指定的偏移，绝对定位的话，它不在标准文档流中，原来的位置不会被保留*/
+        body{
+            padding: 20px;
+        }
+        div{
+            margin: 10px;
+            padding: 5px;
+            font-size: 12px;
+            line-height: 25px;
+        }
+        #father{
+            border: 1px solid #abec6a;
+            padding: 0px;
+        }
+        #first{
+            background-color: #a75bdc;
+            border: 1px dashed #0058af;
+            position: absolute; /*绝对定位，上下左右*/
+            top: -20px;
+
+        }
+        #second{
+            background-color: #e52c8b;
+            border: 1px dashed #003488;
+        }
+        #third{
+            background-color: #f67373;
+            border: 1px dashed #f3a013;
+        }
+    </style>
+</head>
+<body>
+<div id="father">
+    <div id="first">第一个盒子</div>
+    <div id="second">第二个盒子</div>
+    <div id="third">第三个盒子</div>
+</div>
+
+</body>
+</html>
