@@ -55,7 +55,7 @@ div{
     /*行内块 独占一行*/
     display: inline-block;
     float: right;
-    /*clear: both;*/
+    clear: both;
 
 
 }

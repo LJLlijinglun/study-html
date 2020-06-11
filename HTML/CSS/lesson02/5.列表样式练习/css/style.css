@@ -19,12 +19,13 @@ list-style: decimal 有序
 list-style: square 实心正方形
 text-decoration：none去掉文字下划线
 */
-ul li{
+ol li{
     height: 30px;
     /*list-style: none;*/
     /*list-style: circle;*/
     /*list-style: decimal;*/
     list-style: square;
+    overflow-y: auto;
     text-indent: 1em;
     background: antiquewhite url("../images/xiangyoujiantou.jpg") 400px no-repeat;
 
