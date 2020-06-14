@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        // 1.正常字符串我们使用单引号或者双引号包裹住
+        // 2.注意转义字符\
+        // \'
+        // \n
+        // \t
+        // \u4e2d \u#### unicode字符串
+        // "\x41" Ascll字符
+
+        // 模板字符串
+        'use strict';
+        let name = "lijinglun";
+        let score = 95;
+        let mag = `你好呀！, ${name},${score}`;
+        console.log(mag)
+
+        // 字符串长度
+        //str.length
+        let lijinglun = "lijinglun";
+        // 打印字符串长度
+        console.log(lijinglun.length)
+        // 打印字符串下标
+        // 注意：这里lijinglun.toUpperCase() lijinglun.toLowerCase()是方法，而不是属性
+        console.log(lijinglun[0])
+        // 打印出大写字符串
+        console.log(lijinglun.toUpperCase())
+        // 打印出小写字符串
+        console.log(lijinglun.toLowerCase())
+        // 打印出字符串的位置
+        console.log(lijinglun.indexOf("j"))
+        // 打印出截取字符串
+        console.log(lijinglun.substring(1))//从第一个字符串截取到最后一个字符串
+
+        console.log(lijinglun.substring(1,3))//[)从第一个字符串截取到第三个字符串之前
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>
