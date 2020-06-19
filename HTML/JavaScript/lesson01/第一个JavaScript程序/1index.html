@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="change">
+    JavaScript能改变HTML内容
+</p>
+<button type="button" onclick="myfunction()">
+    点击我改变内容
+</button>
+
+<script>
+    function myfunction() {
+        lijinglun=document.getElementById("change");
+        lijinglun.innerHTML="我叫李静伦";//触发按钮改变内容
+    }
+</script>
+
+</body>
+</html>

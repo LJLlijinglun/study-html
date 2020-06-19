@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img id="dengpao" onclick="image()" src="../../../static/images/dengpao1.jpg" alt="">
+<p>点击灯泡改变颜色</p>
+<script>
+    function image() {
+        element=document.getElementById('dengpao')
+        if (element.src.match("dengpao2")){
+            element.src="../../../static/images/dengpao1.jpg";
+        }
+        else {
+            element.src="../../../static/images/dengpao2.jpg";
+        }
+    }
+</script>
+</body>
+</html>
