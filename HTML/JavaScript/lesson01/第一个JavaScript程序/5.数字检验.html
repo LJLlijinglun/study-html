@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>我的第一段JavaScript</h1>
+<p>如果输入的不是数字，将会弹出检验对话框</p>
+<input type="text" id="content">
+<button type="button" onclick="chick()">
+    点击我
+</button>
+<script>
+    function chick() {
+        var lijinglun=document.getElementById("content").value;
+        // isNaN为非数字
+        if (lijinglun==""||isNaN(lijinglun)){
+            alert("请输入数字");
+        }
+    }
+</script>
+</body>
+</html>
