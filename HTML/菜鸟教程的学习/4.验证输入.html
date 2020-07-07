@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>验证学习</title>
+</head>
+<body>
+<h1>这是第一个验证学习例子</h1>
+<input id="demo" type="text">
+<button type="button" onclick="Function()">提交</button>
+<script>
+    function Function(lijinglun) {
+        var lijinglun = document.getElementById("demo").value;
+        // isNaN() 方法检查其类型是否为 Number
+        if (isNaN(lijinglun)){
+            alert("请输入数字");
+        }
+        else if (lijinglun=="") {
+            alert("不能为空值");
+        }
+        else {
+            alert("提交成功")
+        }
+
+    }
+</script>
+</body>
+</html>
