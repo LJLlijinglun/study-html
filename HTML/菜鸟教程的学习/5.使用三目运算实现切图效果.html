@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img id="demo" onclick="Function()" src="../static/images/dengpao1.jpg" width="200" height="300" alt="">
+<p>点击灯泡改变颜色</p>
+<script>
+    function Function() {
+        var lijinglun = document.getElementById("demo");
+        lijinglun.src=lijinglun.src.match('dengpao1')? src="../static/images/dengpao2.jpg": src="../static/images/dengpao1.jpg";
+
+    }
+</script>
+</body>
+</html>
