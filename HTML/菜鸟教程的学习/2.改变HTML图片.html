@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>改变HTML图片</title>
+</head>
+<body>
+<img id="demo" onclick="Function()" src="../static/images/dengpao1.jpg" alt="" height="300" width="200">
+<script>
+    function Function(){
+        lijinglun=document.getElementById("demo");
+        // lijinglun.src.match("dengpao1")的用意是检索<img id="demo" src="../static/images/dengpao1.jpg" alt="" height="300" width="250">
+        //         里面的src属性有没有dengpao1，如果有，图片 src 更新为 dengpao2.jpg，否则，图片 src 更新为 engpao1.jpg
+        if (lijinglun.src.match("dengpao1")){
+            lijinglun.src="../static/images/dengpao2.jpg"
+        }
+        else {
+            lijinglun.src="../static/images/dengpao1.jpg"
+        }
+    }
+
+</script>
+</body>
+</html>
