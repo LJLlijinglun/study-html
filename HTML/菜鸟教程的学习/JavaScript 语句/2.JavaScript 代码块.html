@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>一并执行代码块</title>
+</head>
+<body>
+<h1>我是一个web网页</h1>
+<p>这是一个段落</p>
+<p id="demo1">我叫李静伦</p>
+<p id="demo2">我是张帝女朋友</p>
+<p id="demo3">张帝是我对象</p>
+<button type="button" onclick="Function()">点击改变所有</button>
+<script>
+    function Function() {
+        document.getElementById("demo1").innerHTML="我叫张帝";
+        document.getElementById("demo2").innerHTML="我是李静伦的男朋友";
+        document.getElementById("demo3").innerHTML="李静伦是我对象";
+    }
+</script>
+</body>
+</html>
