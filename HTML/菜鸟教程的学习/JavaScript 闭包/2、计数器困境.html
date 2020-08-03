@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>计数器困境</title>
+</head>
+<body>
+<p>全局变量计数。</p>
+<button type="button" onclick="Function()">计数！</button>
+<p id="demo">0</p>
+<script>
+    var counter = 0;
+    function add() {
+        return counter += 1;
+    }
+    function Function() {
+        lijinglun=document.getElementById("demo");
+        lijinglun.innerHTML = add();
+    }
+</script>
+
+
+</body>
+</html>

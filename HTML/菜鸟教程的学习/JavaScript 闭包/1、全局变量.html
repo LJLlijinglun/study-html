@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>全局变量的学习</title>
+</head>
+<body>
+<p>函数可以访问函数内部的变量:</p>
+<button type="button" onclick="Function()">点击</button>
+<p id="demo"></p>
+<script>
+    function Function() {
+        var lunlun=5;
+        lijignlun=document.getElementById("demo");
+        lijignlun.innerHTML=lunlun*lunlun;
+    }
+</script>
+
+
+</body>
+</html>
