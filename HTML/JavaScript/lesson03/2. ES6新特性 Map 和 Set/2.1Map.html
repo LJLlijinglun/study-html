@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // ES6
+    'use strict';
+    // 二维数组
+    //遍历map
+    var map = new Map([['tom',99],['lina',88],['jeck',77]]);
+    var name = map.get('lina'); //通过key获得成绩value
+    // set:无序不重复的集合
+    map.set('admin',100); //新增或者修改
+    map.delete("tom"); //删除
+    console.log(name)
+    console.log(map)
+    for (var x of map){
+        console.log(x)
+    }
+</script>
+
+</body>
+</html>

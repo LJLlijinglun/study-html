@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // 在javascript中,var定义的变量是有作用域的
+    // 如果在函数内声明,则在函数体外不起做作用 (非要想实现的话,后面可以研究一下闭包)
+    // 如果两个函数使用相同的变量名,只要在各自的函数内,就不会发生冲突
+
+    //内部函数可以访问外部函数的定义的变量，反之亦然
+    // function qj() {
+    //     var x = 1;
+    //
+    //     function qj2() {
+    //         var x = 'A';
+    //         console.log('inner'+x); //innerA
+    //     }
+    //     qj2()
+    //     console.log('outer'+x); //outer1
+    // }
+    // qj()
+    // var z = y+1; //Uncaught ReferenceError: y is not defined
+    // x = x+2; //Uncaught ReferenceError: x is not defined
+
+    //提升变量的作用域
+    function qj() {
+        var x = 'x'+y;
+        console.log(x);
+        var y = 'y';
+    }
+
+
+
+</script>
+</body>
+</html>

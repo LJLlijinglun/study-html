@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // for...in循环
+    'use strict';
+    var age = [1,2,3,4,5,6,7,8,9,11,22,33];
+    // for (var index in object){}
+    for (var num in  age){
+        if (age.hasOwnProperty(num)){
+            console.log("存在");
+            console.log(age[num])
+        }
+
+    };
+</script>
+
+</body>
+</html>

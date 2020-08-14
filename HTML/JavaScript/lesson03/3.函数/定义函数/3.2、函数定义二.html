@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数定义二</title>
+</head>
+<body>
+<script>
+    // function(x) {...}这是一个匿名函数。但是可以把结果赋值给abs，通过abs就可以调用函数，方式一和方式二等价
+    var abs = function (x) {
+        //手动抛出异常判断
+        if (typeof x!=="number"){
+            throw 'Not a number';
+        }
+        if (x>=0){
+            return x;
+        }
+        else {
+            return -x;
+        }
+
+    }
+</script>
+</body>
+</html>
