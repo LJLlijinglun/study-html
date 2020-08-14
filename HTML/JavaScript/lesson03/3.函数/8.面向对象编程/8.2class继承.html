@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //以前的
+    function Student(name) {
+        this.name = name;
+
+    }
+    //给Student新增一个方法
+    Student.prototype.hello = function () {
+        alert("hello")
+    }
+
+
+    //ES6引入的
+    //定义一个学生类 属性、方法
+    class Student{
+        constructor(name){
+            this.name = name;
+        }
+        hello(){
+            alert("hello");
+        }
+    }
+    var xiaoming = new Student("xiaoming");
+    console.log(xiaoming)
+    var xiaohong = new Student("xiaohong");
+    console.log(xiaohong)
+</script>
+</body>
+</html>

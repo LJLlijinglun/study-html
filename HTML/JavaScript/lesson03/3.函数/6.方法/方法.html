@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>方法</title>
+</head>
+<body>
+<script>
+    // var lijinglun = {
+    //     name:'李静伦',
+    //     bitrh:2000,
+    //     // 方法
+    //     age:function () {
+    //         //age = 今年-出生年份
+    //         //获取当前的年份
+    //         var now = new Date().getFullYear();
+    //         return now-this.bitrh;
+    //     }
+    // }
+    // //属性
+    // lijinglun.name
+    // //方法一定带有()
+    // lijinglun.age()
+    // this.bitrh 指向方法里面的属性bitrh
+
+    //拆分方法与函数
+    function getAge() {
+        //age = 今年-出生年份
+        //获取当前的年份
+        var now = new Date().getFullYear();
+        return now-this.bitrh;
+    }
+    var lijinglun = {
+        name:'李静伦',
+        bitrh:2000,
+        age:getAge //拆开只需要写函数名
+    }
+    getAge.apply(lijinglun,[]); //this指向了lijinglun,参数为空
+</script>
+</body>
+</html>

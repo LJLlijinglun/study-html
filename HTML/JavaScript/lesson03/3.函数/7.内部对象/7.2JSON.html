@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var user ={
+        name:"lijignlun",
+        age:20,
+        sex:"女"
+    }
+    console.log(user)
+    //对象转化为json字符串 {"name":"lijignlun","age":20,"sex":"女"}
+    var jsonuser = JSON.stringify(user);
+    console.log(jsonuser)
+    //json字符串转化为对象
+   var obj = JSON.parse('{"name":"lijignlun","age":20,"sex":"女"}')
+    console.log(obj)
+</script>
+</body>
+</html>
