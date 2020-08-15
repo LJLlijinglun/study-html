@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="father">
+    <h1>标题</h1>
+    <p id="demo1">p1</p>
+    <p class="demo2">p2</p>
+</div>
+<script>
+    // 获取tag节点
+    var Tag = document.getElementsByTagName('h1');
+    // 获取id节点
+    var p1 = document.getElementById('demo1');
+    // 获取class节点
+    var p2 = document.getElementsByClassName('demo2');
+    // 获取father节点
+    var father = document.getElementById('father')
+
+    //获取父节点下的所有子节点
+    var children = father.children;
+    // father.firstChild 获取父节点下的第一个子节点
+    // father.lastChild 获取父节点下的最后一个子节点
+</script>
+
+</body>
+</html>
