@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>插入DOM节点</title>
+</head>
+<body>
+<p id="javascript">javascript</p>
+<div id="list">
+    <p id="ee">JavaEE</p>
+    <p id="se">JavaSE</p>
+    <p id="js">Java</p>
+</div>
+<script>
+    var
+        javascript = document.getElementById("javascript"),
+        list = document.getElementById("list");
+    list.appendChild(javascript);
+</script>
+</body>
+</html>

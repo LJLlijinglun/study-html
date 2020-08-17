@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="" type="text/css">
+    <script type="text/javascript"></script>
+</head>
+<body>
+<p id="javascript">javascript</p>
+<div id="list">
+    <p id="ee">JavaEE</p>
+    <p id="se">JavaSE</p>
+    <p id="js">Java</p>
+</div>
+<script>
+    var
+        javascript = document.getElementById("javascript"),
+        list = document.getElementById("list");
+    //创建一个p新节点
+        var newp = document.createElement('p'); //创建一个新标签p
+        newp.id='newp';
+        newp.innerText = '新的标签文本';
+        // 追加到list后面
+        list.appendChild(newp);
+
+        //创建一个新标签节点
+        var myscript = document.createElement("script");
+        myscript.setAttribute('type','text/javascript');
+        list.appendChild(myscript)
+</script>
+
+</body>
+</html>
