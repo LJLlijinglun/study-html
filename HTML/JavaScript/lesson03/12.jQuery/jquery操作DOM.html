@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/core.js"></script>
+</head>
+<body>
+<ul id="demo">
+    <li class="js">javascript</li>
+    <li name="python">python</li>
+</ul>
+<script>
+    $('#demo li[name=python]').text();//获得值
+    $('#demo li[name=python]').text('设置值');//设置值
+    $('#demo').html();//获得值
+    $('#demo').html('<strong>123</strong>');//设置值
+    $('#demo li[name=python]').css("color","red");//设置样式颜色
+    $('#demo li[name=python]').show();//设置显示
+    $('#demo li[name=python]').hide();//设置隐藏
+</script>
+</body>
+</html>
