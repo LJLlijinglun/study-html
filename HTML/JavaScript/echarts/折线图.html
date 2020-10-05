@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>折线图学习</title>
+    <script src="https://cdn.staticfile.org/echarts/4.3.0/echarts.min.js"></script>
+</head>
+<body>
+<!--//创建dom容器 设置宽高-->
+<div id="dom" style="height: 400px;width: 600px"></div>
+<script type="text/javascript">
+    //创建一个echarts实例
+    var demo  = document.getElementById("dom");
+    //初始化echarts实例
+    var echart = echarts.init(demo);
+    //指定图标配置项和数据
+    var option = {
+        //标题
+        title:{
+            text:'折线图堆'
+        },
+        //提示框组件
+        tooltip:{
+            trigger:'axis'
+        },
+        //工具栏组件
+        toolbox:{
+            //下载保存如片
+            feature:{
+                saveAsImage:{}
+            }
+        },
+        //直角坐标系底板
+        grid:{
+            left:'4%',
+            right:'3%',
+            bottom:'3%',
+            containLabel:true
+        },
+        //图例
+        legend: {
+            data:['Vue','React','CSS','HTML','jQuery']
+        },
+        //X轴
+        xAxis:{
+            type:'category',
+            boundaryGap:false,
+            data:['周一','周二','周三','周四','周五']
+        },
+        // Y轴
+        yAxis: {
+            type: 'value'
+        },
+        series: [
+                {
+                    name:'Vue',
+                    type: 'line',
+                    stack:'总量',
+                    data:[200,120,300,250,360]
+                },
+                {
+                    name:'React',
+                    type: 'line',
+                    stack:'总量',
+                    data:[100,510,310,102,90]
+                },
+                {
+                    name:'CSS',
+                    type: 'line',
+                    stack:'总量',
+                    data:[330,120,503,410,310]
+                },
+                {
+                    name:'HTML',
+                    type: 'line',
+                    stack:'总量',
+                    data:[200,550,314,101,360]
+                },
+                {
+                    name:'jQuery',
+                    type: 'line',
+                    stack:'总量',
+                    data:[210,312,220,105,400]
+                },
+            ]
+    };
+    //调用setOption将option输入echrats中，然后echrats渲染图表
+    echart.setOption(option)
+</script>
+
+</body>
+</html>

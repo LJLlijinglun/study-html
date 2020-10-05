@@ -9,39 +9,96 @@
 <div id="dom" style="height: 400px;width: 600px"></div>
 <script type="text/javascript">
     // var echarts = require('echarts');
-    //准备好的dom，初始化echarts实例
+    //准备好的dom，echarts.init初始化echarts实例
     var myCharts = echarts.init(document.getElementById('dom'));
     //指定图表的配置项和数据
     var option = {
-        title:{
-            text:"第一个ECharts实例"
+        //图形标题
+        title: {
+            text: '柱状图形'
         },
-        tooltip:{},
+        //提示框组件
+        tooltip: {
+            // trigger:'axis'  折线图批量提示
+        },
+        // 图例组件
         legend: {
-            data:["销量"],
+            data: ['邮件营销', '联盟广告', '视频广告', '直接访问', '搜索引擎']
         },
-        //X轴
-        xAxis:{
-            data:[
-                "衬衫",
-                "羊毛衫",
-                "雪纺衫",
-                "裤子",
-                "高跟鞋",
-                "袜子",
-
-            ]
+        //直角坐标系底板
+        grid: {
+            left: '1%',
+            right: '1%',
+            bottom: '3%',
+            containLabel: true
         },
-        // Y轴
-        yAxis:{},
-        series:[{
-            name:"销量",
-            type:"bar",
-            data:[5,20,36,10,10,20]
-        }]
-
+        //工具栏组件
+        toolbox: {
+            //下载保存图片
+            feature: {
+                saveAsImage: {}
+            }
+        },
+        //X轴 如果有多个同类组件，那么就是个数组。例如这里有三个 X 轴。
+        xAxis:
+        // 数组每项表示一个组件实例，用 type 描述“子类型”。
+            {
+            type: 'category',
+            boundaryGap: true,
+            data: ['周一', '周二', '周三', '周四', '周五', '周六', '周日']
+        },
+        //Y轴
+        yAxis: {
+            type: 'value'
+        },
+        //系列 专门绘制“图”的组件
+        series: [
+            // 每个系列，也有 type 描述“子类型”，即“图表类型”。
+            {
+                name: '邮件营销',
+                type: 'bar',
+                stack:'总量',
+                data: [100]
+            },
+            {
+                name: '联盟广告',
+                type: 'bar',
+                stack:'总量',
+                data: [0,220]
+            },
+            {
+                name: '视频广告',
+                type: 'bar',
+                stack:'总量',
+                data: [0,0,150]
+            },
+            {
+                name: '直接访问',
+                type: 'bar',
+                stack:'总量',
+                data: [0,0,0,320]
+            },
+            {
+                name: '搜索引擎',
+                type: 'bar',
+                stack:'总量',
+                data: [0,0,0,0,820]
+            },
+            {
+                name: '搜索',
+                type: 'bar',
+                stack:'总量',
+                data: [0,0,0,0,0,600]
+            },
+            {
+                name: '引擎',
+                type: 'bar',
+                stack:'总量',
+                data: [0,0,0,0,0,0,510]
+            },
+        ]
     };
-    //使用刚指定的配置项和数据显示图表
+    // 调用 setOption 将 option 输入 echarts，然后 echarts 渲染图表。
     myCharts.setOption(option);
 
 </script>
