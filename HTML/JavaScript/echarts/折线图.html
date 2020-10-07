@@ -7,7 +7,7 @@
 </head>
 <body>
 <!--//创建dom容器 设置宽高-->
-<div id="dom" style="height: 400px;width: 600px"></div>
+<div id="dom" style="height: 600px;width: 500px"></div>
 <script type="text/javascript">
     //创建一个echarts实例
     var demo  = document.getElementById("dom");
@@ -21,7 +21,7 @@
         },
         //提示框组件
         tooltip:{
-            trigger:'axis'
+            trigger:'axis' //批量提示
         },
         //工具栏组件
         toolbox:{
@@ -44,7 +44,7 @@
         //X轴
         xAxis:{
             type:'category',
-            boundaryGap:false,
+            boundaryGap:true, //边界间隙
             data:['周一','周二','周三','周四','周五']
         },
         // Y轴
@@ -52,6 +52,17 @@
             type: 'value'
         },
         series: [
+            {
+                type: 'pie',
+                center:['65%',60],
+                radius:35,
+                data:[
+                    {name:'avascript',value:50},
+                    {name:'hhh',value:35},
+                    {name:'aaa',value:15}
+                ]
+            },
+
                 {
                     name:'Vue',
                     type: 'line',
@@ -82,6 +93,11 @@
                     stack:'总量',
                     data:[210,312,220,105,400]
                 },
+            {
+                type: 'bar',
+                name:'lunlun',
+                data:[20,30,10,50,100]
+            }
             ]
     };
     //调用setOption将option输入echrats中，然后echrats渲染图表
