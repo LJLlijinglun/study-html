@@ -27,19 +27,33 @@
         toolbox:{
             //下载保存如片
             feature:{
-                saveAsImage:{}
+                saveAsImage:{},
+                itemStyle: {
+                    left: 200,
+                }
             }
         },
         //直角坐标系底板
         grid:{
-            left:'4%',
-            right:'3%',
-            bottom:'3%',
+            left:'0%',
+            right:'0%',
+            bottom:'0%',
+            top:'40%',
             containLabel:true
         },
         //图例
         legend: {
-            data:['Vue','React','CSS','HTML','jQuery']
+            data:['pie','Vue','React','CSS','HTML','jQuery','lunlun'],
+            itemWidth:20,
+            itemHeight:10,
+            // left: '60%',
+            padding:50,
+            top: '0%',
+            itemGap:10,
+            itemStyle:{
+                fontSize:12,
+                color:'#F1F1F3',
+            }
         },
         //X轴
         xAxis:{
@@ -53,8 +67,9 @@
         },
         series: [
             {
+                name:'pie',
                 type: 'pie',
-                center:['65%',60],
+                center:['65%',200],
                 radius:35,
                 data:[
                     {name:'avascript',value:50},
