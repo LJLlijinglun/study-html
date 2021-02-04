@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // keys()是对键名的遍历、values()是对键值的遍历，entries()是对键值对的遍历。
+    // for...of循环
+    let arr = ["a","b","c","ff","gg"];
+    for (let index of arr.keys()){
+        console.log(index) //keys()求数组下标
+    }
+    for (let value of arr.values()){
+        console.log(value) //求数组值
+    }
+    for (let [keys,value] of arr.entries()){
+        console.log([keys,value])
+    }
+    //手动调用遍历器对象的next方法，进行遍历。
+    let entries = arr.entries();
+    console.log(entries.next().value); // [0, 'a']
+    console.log(entries.next().value); // [1, 'b']
+    console.log(entries.next().value); // [2, 'c']
+    console.log(entries); // [2, 'c']
+
+</script>
+
+</body>
+</html>

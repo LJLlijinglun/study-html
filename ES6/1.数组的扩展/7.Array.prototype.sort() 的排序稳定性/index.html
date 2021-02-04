@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // 上面代码对数组arr按照首字母进行排序。排序结果中
+    let arr = [
+        "dd",
+        "aa",
+        "ff",
+        "ss",
+        "hh",
+    ];
+    const stableSorting = function (s1, s2) {
+        if (s1[0] < s2[0]) return -1;
+        return 1;
+    };
+    arr.sort(stableSorting)
+    console.log(arr)
+</script>
+
+</body>
+</html>

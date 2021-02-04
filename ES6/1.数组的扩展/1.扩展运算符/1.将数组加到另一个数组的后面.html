@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数组合并</title>
+</head>
+<body>
+<script>
+    //将一个数组添加到另一个数组的尾部
+    let arr1 = [1,2,3,45,6,4,5,6];
+    let arr2 = [10,2,3,45,6,6,5,8];
+    //ES5的写法
+    Array.prototype.push.apply(arr1,arr2) //push方法参数不能是数组，所以利用apply方法变通使用push方法
+    console.log("newArr1-->",arr1)
+    //ES6的写法
+    arr1.push(...arr2);
+    console.log("newArr2-->",arr1)
+</script>
+</body>
+</html>

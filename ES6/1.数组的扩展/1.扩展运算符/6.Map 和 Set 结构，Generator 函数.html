@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Set和Map结构</title>
+</head>
+<body>
+<script>
+    let map = new Map([
+        [1,"draggable"],
+        [2,"dateRe"],
+        [3,"Search"],
+    ]);
+    //扩展运算符解构map，取key值
+    let arr = [...map.keys()]
+    console.log(arr)
+    console.log(...map)
+</script>
+
+</body>
+</html>

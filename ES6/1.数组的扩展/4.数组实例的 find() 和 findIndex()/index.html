@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // 数组实例的find方法，用于找出第一个符合条件的数组成员,它的参数是一个回调函数，
+    // 所有数组成员依次执行该回调函数,如果不符合条件，则返回undefined
+    let arr = [5,2,4,8,9,48,8];
+    let a = arr.find((value,index,arr)=>value>7)//参数依次为数组的值，下标位置，原数组
+    console.log(a)
+    // 数组实例的findIndex方法返回第一个符合条件的数组成员的位置，如果所有成员都不符合条件，则返回-1。
+    let b = arr.findIndex((value,index,arr)=>{
+        return value>8; // 求值第一个大于8值的下标
+    })
+    console.log(b)
+
+</script>
+
+</body>
+</html>

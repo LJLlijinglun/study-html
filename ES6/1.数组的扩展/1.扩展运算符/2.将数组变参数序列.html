@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>将数组变参数序列</title>
+</head>
+<body>
+<script>
+    //扩展运算符--将数组变参数序列
+    let arr = ['a',1,2,3,4];
+    function fun(x,a,c,a,g){};
+    fun(...arr)
+    console.log("arr-->",arr[0],arr[1])
+    //函数调用
+    //注意，只有函数调用时，扩展运算符才可以放在圆括号中,否者会报错
+    function add(x,y){
+        return x+y;
+    }
+    let sum = add(...[4,5])
+    console.log(sum)
+</script>
+
+</body>
+</html>
