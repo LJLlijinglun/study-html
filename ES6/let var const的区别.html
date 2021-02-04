@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //1：let和const解决var的变量穿透的问题
+
+    //2：常量修改的问题
+
+    for (var i=0;i<6;i++){
+        console.log("i-->",i)
+    }
+    //这里就是变量穿透
+    // console.log("i2-->",i)
+    //这里就是常量修改的问题
+    var PI = Math.PI
+    PI = 100
+    console.log("PI-->",PI)
+    //亲自尝试后建议，在实际开发和生产中，如果是小程序或者是uniapp或者是一些脚手架开发的话，可以大胆使用let和const，
+    // 但是如果是在web开发中，建议使用var，因为在一些浏览器是不支持let和const
+</script>
+</body>
+</html>

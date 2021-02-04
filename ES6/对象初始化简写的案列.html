@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="">
+    <p>账号:<input type="text" id="account"></p>
+    <p>密码:<input type="text" id="password"></p>
+    <p><input type="button" value="登录" id="loginbtn"></p>
+</form>
+<script>
+    //绑定一个点击事件
+    // document.getElementById("loginbtn").onclick=function (){
+    //
+    // }
+    //使用jquery
+    $("#loginbtn").on(click,function (){
+        //拿到账号传给后台
+        var account = $("#account").val();
+        var password = $("#password").val();
+        // 简写的应用场景
+        var params = {account, password};
+        //执行异步请求
+        $.ajax({
+            type:"post",
+            url:"xxxx",
+            data:params, //传参数
+            success(){
+
+            }
+        })
+    })
+
+</script>
+
+</body>
+</html>

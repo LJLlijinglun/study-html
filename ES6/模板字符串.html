@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //字符串会涉及到动态部分
+    var person = {
+        name:"伦伦",
+        address:"广州",
+        link:"https://www.Kuangstudy.com"
+    }
+    let address = "传统的----我是" + person.name + "正在" + person.address+"学习ES6的路上"+"大家一起来看"+person.link+"学习吧";
+    console.log("address-->",address)
+
+    //ES6的语法操作 支持换行
+    let address2 = `ES6---我是${person.name},
+    正在${person.address}学习ES6的路上,
+    大家一起来看${person.link}学习吧`;
+    console.log("address2-->",address2)
+</script>
+
+</body>
+</html>

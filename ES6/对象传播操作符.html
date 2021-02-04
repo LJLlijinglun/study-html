@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //对象传播操作符
+    var person = {
+        title:"学习ES6",
+        name:"lunlun",
+        link:"https://www.kuangstudy.com",
+        go(){
+            console.log("come on study")
+        }
+    }
+    //解构出来 剩余的都赋给了person1
+    var {title,name,...person1} = person
+    console.log("hahahha-->",title,name,person1)
+    person.go()
+</script>
+
+</body>
+</html>

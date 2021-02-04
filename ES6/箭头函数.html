@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //重点---箭头函数（在未来的项目开发中，比如uniapp，小程序，一些常见的脚手架大量使用）
+    var sum = function (a,b){
+        return a+b
+    }
+    //箭头函数 改进1
+    //1:去掉function
+    //2:在括号后面加箭头=>
+    //3:如果逻辑代码仅有return可以直接全部省去（如果你有逻辑体，你就不能去省略）
+    //4:如果参数只有一个，可以去掉括号
+    var sum = (a,b)=>{
+        return a+b
+    }
+    //比如
+    var arr = [1,2,3,4,5];
+    var newArr1 = arr.map(function (object){
+        return object*2;
+    });
+    //改变--去function
+    var newArr2 = arr.map((object)=>{
+        return object*2;
+    });
+    //改变--没有逻辑体可去掉大括号
+    var newArr3 = arr.map((object)=>object*2);
+    //改变--只有一个参数，可去掉括号
+    var newArr4 = arr.map(object=>{
+        return object*2;
+    });
+    console.log("newArr--->",newArr1,newArr2,newArr3,newArr4)
+
+
+    //箭头函数 改进2
+    var sum = (a,b)=>a+b
+
+</script>
+
+</body>
+</html>

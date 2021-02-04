@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //Set类似于数组，它的值是唯一的，没有重复的值
+    //Set本身就是一个构造函数，用来生成Set数据结构
+    // 上面代码通过add()方法向 Set 结构加入成员，结果表明 Set 结构不会添加重复的值。
+    const a = new Set();
+    let Arr = [2,2,5,5,6,6,7,8,9]
+    Arr.forEach(function (x){
+        return a.add(x)
+    });
+    console.log("a-->",a) //[2,5,6,7,8,9]
+</script>
+
+</body>
+</html>

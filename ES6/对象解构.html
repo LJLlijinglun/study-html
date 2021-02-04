@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //传统---对象是以key:value键值对存在的，获取属性的方式有两种
+    //1.通过.
+    //2通过[]
+    let info = {
+        title:"广州",
+        name:"伦伦",
+        link:"https//www.Kuangstudy.com",
+        go(){
+            console.log("我是伦伦，相约广州学习ES6")
+        }
+    }
+    //通过点获取
+    console.log(info.title)
+    info.go()
+    //通过中括号[]获取
+    console.log(info["title"])
+    info["go"]()
+    //ES6快速获取属性方法的方式
+    var {title,name,go} = info
+    console.log("hhh-->",title,name);
+    go();
+    //还原代码
+    var title = info.title
+    var name = info.name
+    var go = info.go
+
+</script>
+
+</body>
+</html>

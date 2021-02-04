@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let info = {
+        title:"广州",
+        name:"伦伦",
+        link:"https//www.Kuangstudy.com",
+        go:function () {
+            console.log("我是伦伦，相约广州学习ES6")
+        }
+    }
+    //ES6简写
+    //因为对象是键值对的存在key:value
+    //如果key和变量的名称一致，可以只定义一次即可
+    //如果value是一个函数，可以把`:function`全去掉，只剩下()即可
+    var title = "广州";
+    var link = "https//www.Kuangstudy.com";
+    ////如果key和变量的名称一致，可以指定一次即可
+    let info1 = {
+        title,
+        name:"伦伦",
+        link,
+        go:function () {
+            console.log("我是伦伦，相约广州学习ES6")
+        }
+    }
+    //如果value是一个函数，可以把`:function`全去掉，只剩下()即可
+    let info2 = {
+        title:"广州",
+        name:"伦伦",
+        link:"https//www.Kuangstudy.com",
+        go() {
+            console.log("我是伦伦，相约广州学习ES6")
+        }
+    }
+    console.log("info1-->",info1)
+    console.log("info1.title-->",info1.title)
+    console.log("info1.link-->",info1.link)
+    info2.go()
+</script>
+
+</body>
+</html>
