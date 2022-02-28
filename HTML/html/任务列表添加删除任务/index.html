@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>任务列表</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+<!--    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">-->
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<div class="container">
+    <div id="main" class="card">
+        <div class="card-content">
+            <h5 class="title">任务列表</h5>
+            <input type="text" id="inputvalue" placeholder="请输入新的任务内容..."/>
+            <input type="submit" id="submit" value="添加任务" class="btn"></input>
+        </div>
+        <div class="card-action">
+            <h5 class="title">任务</h5>
+            <input type="text" id="filterInput" placeholder="请输入检索任务内容..."/>
+            <ul class="collection"></ul>
+            <a href="#"  class="clear-tasks btn black">删除任务</a>
+        </div>
+
+    </div>
+</div>
+<!-- 引入materialize框架 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+<script
+        src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous"></script>
+<script src="js/mini.js"></script>
+</body>
+</html>

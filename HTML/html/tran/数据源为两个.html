@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>bootstrap穿梭框</title>
+    <link href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/bootstrap-table/1.12.1/bootstrap-table.min.css" rel="stylesheet">
+    <link href="./tranfer.css" rel="stylesheet">
+    <style>
+        body {
+            overflow: hidden;
+        }
+
+        .fixed-table-container {
+            position: relative;
+            clear: both;
+            height: 290px !important;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+        }
+
+        .formdata {
+            width: 150px;
+        }
+
+        #formstyle span {
+            margin-right: 10px;
+        }
+
+        thead {
+            background-color: #38ad9c;
+        }
+
+        .titlename {
+            color: #139641;
+            margin-bottom: 10px;
+            font-family: system-ui;
+            font-size: 15px;
+        }
+
+        #formstyle {
+            display: block;
+        }
+
+        #formstyle:before {
+            vertical-align: middle;
+            display: inline-block;
+            content: '';
+        }
+
+        .btn-item {
+            text-align: center;
+            display: block;
+        }
+
+        .btn-item:before {
+            vertical-align: middle;
+            display: inline-block;
+            content: '';
+            height: 50%;
+        }
+
+        #contentstyle {
+            vertical-align: middle;
+            display: inline-block;
+        }
+
+        .btn-data {
+            border: 1px solid #1a865a;
+            color: #1a865a;
+        }
+
+        .row {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            /* margin-right: -15px; */
+            /* margin-left: -15px; */
+            padding-left: 30px;
+            padding-top: 15px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+<!--    <h2>数据源为两个 时的刷新</h2>-->
+<div id="formstyle" style="height: 50px;width: 100%;text-align: center;padding: 10px;box-sizing: border-box">
+            <span>
+                任务名称：
+                <input class="formdata" type="text" placeholder="请输入"/>
+            </span>
+    <span>
+                日期参数：
+              <select class="formdata">
+                  <option value="volvo">当前日期</option>
+                  <option value="saab">昨日日期</option>
+              </select>
+            </span>
+    <span>
+                周数频率：
+              <select class="formdata">
+                  <option value="volvo">日</option>
+                  <option value="saab">月</option>
+                  <option value="saab">年</option>
+              </select>
+            </span>
+    <span>
+                开始时间：
+                <input class="formdata" type="date" value="2021-12-06"/>
+        <!--              <input class="form-control date-picker" type="text" name="attr.date_start"-->
+        <!--                     placeholder="时间开始" data-date-format="yyyy-mm-dd" id="input_monday">-->
+            </span>
+    <span>
+                数据主键：
+                  <input class="formdata" type="text" placeholder="请输入"/>
+            </span>
+</div>
+<div id="transferContainer" class="row" style="height: 430px;width: 100%;text-align: center"></div>
+<!--    <div>-->
+<!--        中间点击按钮图标没显示出来没关系 是因为引入的cdn问题 正常下载引入bootstrap.css的话没问题<br> 'getData' 内置方法 selectData是获取选中的数据 后面importUnitId 是收集的字段 如果需要收集多个字段就改为数组<br> $('#transferContainer').transfer('getData', 'selectData', 'importUnitId')-->
+<!--    </div>-->
+<!--    <h3>数据在后台 coonsole中查看</h3>-->
+<div style="text-align: center;margin-top: 30px">
+    <button id='btn' type="button" class="btn btn-primary">获取已选数据</button>
+    <button id='btn2' type="button" class="btn btn-primary">刷新待选数据</button>
+</div>
+
+</body>
+
+</html>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap-table/1.12.1/bootstrap-table.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap-table/1.12.1/locale/bootstrap-table-zh-CN.min.js"></script>
+<script src="Transfer.js"></script>
+
+<!-- 中间点击按钮图标没显示出来没关系  是因为引入的cdn问题  正常下载引入bootstrap.css的话没问题的 -->
+<!-- 此处演示的数据源为一个 用falg去区分在哪个里面 -->
+<script type="text/javascript">
+    var data = [
+        {
+            "importUnitId": "950258484706803712",
+            "importUnitName": "分数对比2016",
+        }, {
+            "importUnitId": "949202813861232640",
+            "importUnitName": "对比1",
+        }, {
+            "importUnitId": "948380218236600320",
+            "importUnitName": "测试2",
+        }, {
+            "importUnitId": "946590730653007872",
+            "importUnitName": "对比4",
+        }, {
+            "importUnitId": "946590730653007889",
+            "importUnitName": "对比954",
+        }, {
+            "importUnitId": "946590730653008647",
+            "importUnitName": "对比88",
+        }]
+    var data1 = [
+        {
+
+            "importUnitId": "950258484706803712",
+            "importUnitName": "分数对比2016",
+
+        }, {
+            "importUnitId": "949202813861232640",
+            "importUnitName": "对比1",
+        }, {
+
+            "importUnitId": "95025848470680372344",
+            "importUnitName": "分数对比qwewe",
+
+        }, {
+            "importUnitId": "949202813861234342640",
+            "importUnitName": "对比eqwe",
+        }, {
+            "importUnitId": "948380215823660033320",
+            "importUnitName": "测试qwe",
+        }, {
+            "importUnitId": "946590730653663007872",
+            "importUnitName": "对比gdfgdfg",
+        }, {
+            "importUnitId": "94659073065303407889",
+            "importUnitName": "asdsd",
+        }, {
+            "importUnitId": "94659073065306708647",
+            "importUnitName": "对比8787",
+        }]
+    $('#transferContainer').transfer({
+        titles: ['待选列表', '已选列表'],
+        search: true,
+        uniqueId: "importUnitId", //唯一id
+        dataSource: data,
+        selectdataSource: [],
+        unselectColumns: [{
+            field: 'flag',
+            checkbox: true
+        }, {
+            field: 'importUnitName',
+            title: '抽取类型'
+        }, {
+            field: 'importUnitName',
+            title: '名称'
+        },
+        ]
+    });
+
+    $('#btn').click(function () {
+        var data = $('#transferContainer').transfer('getData', 'selectData', 'importUnitId');
+        console.log("-->",data)
+    })
+
+    $('#btn2').click(function () {
+        $('#transferContainer').transfer('refreshLeft', data1);
+    })
+</script>

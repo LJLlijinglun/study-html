@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <title>Title</title>
+    <style>
+        .button{
+            position: relative;
+            top: 5vw;
+        }
+        .drawer{
+            width: 100%;
+            height: 100%;
+        }
+        .dadada{
+            background-color: red;
+        }
+        input[type="checkbox"] {
+            width: 12px;
+            height: 12px;
+            display: inline-block;
+            text-align: center;
+            vertical-align: middle;
+            line-height: 12px;
+            position: relative;
+        }
+
+        input[type="checkbox"]::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: #fff;
+            width: 100%;
+            height: 100%;
+            border: 1px solid #CACDCF
+        }
+
+        input[type="checkbox"]:checked::before {
+            content: "\2713";
+            background-color: #2196F3;
+            color: #fff;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            border: 1px solid #2196F3;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        input[type="checkbox"]:disabled::before {
+            content: "\2713";
+            background-color: red;
+            color: #fff;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            border: 1px solid #2196F3;
+            font-size: 12px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+<!--    <el-row>-->
+<!--        <el-button @click="visible = true">Button</el-button>-->
+<!--        <el-dialog :visible.sync="visible" title="Hello world">-->
+<!--            <p>Try Element</p>-->
+<!--        </el-dialog>-->
+<!--        <div class="button">-->
+<!--            <el-button @click="drawer.add=true" type="primary">-->
+<!--                点击打开抽屉-->
+<!--            </el-button>-->
+<!--        </div>-->
+<!--        <el-drawer-->
+<!--                class="drawer"-->
+<!--                :visible.sync="drawer.add"-->
+<!--                :direction="direction"-->
+<!--                befor-close="handleClose"-->
+<!--                :with-header="false">-->
+<!--            <span>我来了</span>-->
+<!--        </el-drawer>-->
+<!--        <el-popconfirm-->
+<!--                style="position: relative;bottom: 2vw"-->
+<!--                confirm-button-text="确定"-->
+<!--                cancel-button-text="不用了"-->
+<!--                icon="el-icon-info"-->
+<!--                icon-color="red"-->
+<!--                title="这是一段内容确定删除吗？"-->
+<!--        >-->
+<!--            <el-button type="danger" slot="reference">删除</el-button>-->
+<!--        </el-popconfirm>-->
+<!--    </el-row>-->
+
+    <form action="demo_form.asp">
+        <input type="checkbox" name="vehicle" value="Bike" />bike
+        <input class="dadada" type="checkbox" name="vehicle" disabled value="Car" checked="checked" />car
+<!--        <input type="submit" value="Submit" />-->
+    </form>
+</div>
+</body>
+<!-- import Vue before Element -->
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script src="jquery-3.6.0.min.js"></script>
+<!-- import JavaScript -->
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: function() {
+            return {
+                visible: false,
+            drawer:{
+                add:false
+            },
+                direction:'rtl'
+            }
+        }
+    })
+</script>
+</html>
